@@ -3,15 +3,17 @@ body {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     background: #73A6AD;
 }
-/* Stationary header */
+/* Stationary banner header */
 #page-banner {
+    height: 55px;
     position: fixed;
     background: #CC92C2;
     right: 0%;
     left: 0%;
     top: 0%;
     padding: .5%;
-    z-index:10
+    z-index:10;
+    
 
 }
 /* map tabs to what elements they should display */
@@ -26,15 +28,15 @@ input ~ .credential-container { display: none }
 #project-tab:checked ~ section.credential-container.projects,
 #work-tab:checked ~ section.credential-container.work { display: block; }
 
-/* has to be top 300px cause header doesn't change size */
+/* has to be top 100px cause header doesn't change size */
 #tabs {
 
     position: absolute;
-    top: 100px;
+    top: 70px;
     width: 100%;
     overflow-y:auto;
     z-index: 2;
-    background: white;
+    
 
 }
 /* style when tab is not selected */
@@ -46,27 +48,37 @@ input + label {
     position: relative;
     top: 1px;
     font-family: "Andalé Mono", monospace;
+    
   }
   /* style when tab is selected */
   input:checked + label {
     background: #F6E6CA;
     border-bottom: 1px solid transparent;
   }
+
+  /* pads the content */
   input ~ .credential-container {
    
     padding: 12px;
   }
 
+
+  /* sets background and text color for content in tabs */
   .credential-container {
       background: white;
       color: #706D74;
       
   }
 
+  /* alters text font and color for section headers */
   .section-header {
       color: black;
       font-weight: bold;
+      
   }
+
+  /* alters subsection headers color */
   .subsec-header {
       color: black;
   }
+
